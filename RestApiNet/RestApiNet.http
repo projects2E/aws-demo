@@ -1,0 +1,6 @@
+@RestApiNet_HostAddress = http://localhost:5088
+
+GET {{RestApiNet_HostAddress}}/
+Accept: application/json
+
+###
