@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+  pre_build:
+    commands:
+      - echo "Restaurando paquetes NuGet..."
+      - dotnet restore
+  build:
+    commands:
+      - echo "Compilando la solución..."
+      - dotnet build
+  post_build:
+    commands:
+      - echo "Publicando la API..."
+      - dotnet publish -c Release -f net8.0 -o /builds
+artifacts:
+  files:
+    - /builds/**
+    - appspec.yml
+    - after-iis-install-start.bat
+    - before-iis-install-stop.bat
+  exclude-paths:
+  ##  - '**/*.config'
