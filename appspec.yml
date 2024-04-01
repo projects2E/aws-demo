@@ -7,3 +7,10 @@ files:
     destination: C:\inetpub\wwwroot\cliente3\api\
   - source: \builds\
     destination: C:\inetpub\wwwroot\cliente1\api\
+hooks:
+  BeforeInstall:
+    - location: \before-iis-install-stop.bat
+      timeout: 900
+  AfterInstall:
+    - location: \after-iis-install-start.bat
+      timeout: 180
