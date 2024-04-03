@@ -23,4 +23,4 @@ artifacts:
     - after-iis-install-start.bat
     - before-iis-install-stop.bat
   exclude-paths:
-  ##  - '**/*.config'
+    - '**/*.config'
