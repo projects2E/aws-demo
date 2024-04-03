@@ -1,2 +1,1 @@
 # RestApiNet app
-release
